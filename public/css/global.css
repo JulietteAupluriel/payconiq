@@ -1302,11 +1302,15 @@ input:checked~label {
     .wrapMoreQuestions input[type="text"] {
         margin-left: 0;
     }
-    ;
     .sect-onTheRoad.is-active .cities .city.active h5,
     .sect-onTheRoad .cities .city:hover h5 {
         font-size: 30px;
         line-height: 19px;
+    }
+    .sect-aboutContest .aboutContest,
+    .sect-chooseAGift h2,
+    .sect-chooseAGift #gifts article {
+        opacity: 1!important;
     }
 }
 
