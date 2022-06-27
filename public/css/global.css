@@ -1236,10 +1236,7 @@ input:checked~label {
     #section_form .logo {
         width: 70px;
     }
-    .scrollBottom {
-        right: 50%;
-        margin-right: -30px;
-    }
+    .scrollBottom {}
     #section_form {
         padding: 130px 5%;
         overflow-y: scroll;
@@ -1312,6 +1309,9 @@ input:checked~label {
     }
     .sect-onTheRoad .cities .city:hover .date {
         display: none!important;
+    }
+    .sect-onTheRoad .cities .city.active .date {
+        display: block!important;
     }
     .sect-onTheRoad.is-active .cities .city .date {
         font-size: 40px;
