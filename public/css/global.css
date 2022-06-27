@@ -794,7 +794,6 @@ footer p a {
 
 .wrapSentences span {
     font-size: 55px;
-    font-family: "Sofia Pro";
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-shadow: 0px 0px 5.95px rgba(19, 19, 20, 0.15);
@@ -875,7 +874,6 @@ input:focus {
 
 .wrapMoreQuestions h5 {
     font-size: 23px;
-    font-family: "Sofia Pro";
     color: rgb(253, 87, 131);
     text-transform: uppercase;
     background-color: #f9dc0a;
@@ -1311,6 +1309,15 @@ input:checked~label {
     .sect-chooseAGift h2,
     .sect-chooseAGift #gifts article {
         opacity: 1!important;
+    }
+    .sect-onTheRoad .cities .city:hover .date {
+        display: none!important;
+    }
+    .sect-onTheRoad.is-active .cities .city .date {
+        font-size: 40px;
+    }
+    .sect-onTheRoad .cities .city:hover .square {
+        transform: translateY(0px);
     }
 }
 
