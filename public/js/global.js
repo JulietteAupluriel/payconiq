@@ -104,7 +104,6 @@ function setSection(newSection, index) {
     clearInterval(interval);
     if (index == 1) {
         if (once === 2) {
-            console.log('ICI');
             changeTitle();
             setTimeout(function() {
                 interval = setInterval(changeTitle, 5000);
@@ -114,13 +113,13 @@ function setSection(newSection, index) {
             interval = setInterval(changeTitle, 5000);
 
         }
-        console.log('testsection');
 
     } else {
-        console.log('autre section');
+
         clearInterval(interval);
     }
 
+    console.log(index);
     if (index == 4) {
         $('.scrollBottom').attr('href', '#sect-1');
         $('.scrollBottom').addClass('top');
