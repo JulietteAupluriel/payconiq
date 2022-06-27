@@ -16,8 +16,8 @@
           </div></div>
        </div>
             <ul class="socials">
-                    <li><a href="#"><img src="{{ asset('img/instagram.svg') }}"/></a></li>
-                    <li><a href="#"><img src="{{ asset('img/facebook.svg') }}"/></a></li>
+                    <li><a href="https://www.instagram.com/payconiqbybancontact/" target="_blank"><img src="{{ asset('img/instagram.svg') }}"/></a></li>
+                    <li><a href="https://www.facebook.com/PayconiqbyBancontact/" target="_blank"><img src="{{ asset('img/facebook.svg') }}"/></a></li>
                 </ul>
 
                 <ul class="lang">
@@ -216,7 +216,7 @@
   <div id="section_form"   @if (session('status')) class="active" @endif>
   <a href="http://payconic.test" class="logo">
     
-    <img src="http://payconic.test/img/logo.svg">
+    <img src="{{ asset('img/logo.svg') }}">
   </a>
 <div class="close">x</div>
   <div class="table"><div class="cell">
@@ -328,7 +328,7 @@
                 @if(app()->isLocale('FR'))
                 J’ai compris et j’accepte les 
                 <a href="{{ route('legals') }}" target="_blank">
-                conditions de participation
+                conditions de participation</a>
                 @else
                 Ik heb de wedstrijdvoorwaarden gelezen en  <a href="{{ route('legals') }}" target="_blank">aanvaard ze</a>
                 @endif

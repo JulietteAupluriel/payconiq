@@ -1205,7 +1205,7 @@ input:checked~label {
         align-self: center;
     }
     .sect-onTheRoad .car {
-        top: calc( 20vw + 180px);
+        top: 170px!important;
         left: -5%!important;
         margin-top: 0;
     }
@@ -1298,6 +1298,15 @@ input:checked~label {
     }
     .sect-hero.is-active .bgForAnim {
         transform: translateY(0);
+    }
+    .wrapMoreQuestions input[type="text"] {
+        margin-left: 0;
+    }
+    ;
+    .sect-onTheRoad.is-active .cities .city.active h5,
+    .sect-onTheRoad .cities .city:hover h5 {
+        font-size: 30px;
+        line-height: 19px;
     }
 }
 
