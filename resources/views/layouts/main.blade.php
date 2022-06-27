@@ -57,7 +57,17 @@
       <a href="#" target="_blank">  <img src="{{ asset('img/googlePlay.png') }}" /></a>
     </div>
     <div class="footerBottom"><p>Powered by <a href="http://www.digizik.com" target="_blank">digizik</a></p>
-    <p>Politique de protection des <a href="{{ route('legals') }}">données</a></p>
+   
+    @if(app()->isLocale('FR'))
+     <p>Politique de protection des <a href="{{ route('legals') }}">données</a></p>
+    <p><a href="https://www.payconiq.be/fr/declaration-de-confidentialite-et-conditions-generales">Déclarations de Confidentialité et Conditions générales</a> 
+@else
+<p><a href="{{ route('legals') }}">Gegevensbeschermingsbeleid</a></p>
+    <p><a href="https://www.payconiq.be/nl/privacyverklaring-en-algemene-voorwaarden">Privacyverklaring en Algemene voorwaarden </a> 
+@endif
+
+
+
 </div>
 
 </div>

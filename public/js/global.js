@@ -41,6 +41,21 @@ function showImgContent(e) {
 
 document.addEventListener('mousemove', showImgContent);
 
+function showImgContentMobile() {
+    x = Math.floor(Math.random() * 11) / 10;
+    y = Math.floor(Math.random() * 11) / 10;
+    console.log(x + ' ' + y);
+    width = 0.2;
+    height = 0.2;
+    angle = 0.03;
+    $('.link-image #cp3 path.class1').attr('d', 'M' + x + ',' + y + '  h' + width + '   q' + angle + ',0 ' + angle + ',' + angle + ' v' + height + ' q0,' + angle + ' -' + angle + ',' + angle + ' h-' + width + '  q-' + angle + ',0 -' + angle + ',-' + angle + ' v-' + height + ' q0,-' + angle + ' ' + angle + ',-' + angle + ' Z');
+
+}
+
+
+
+
+
 
 var isMobile = false;
 
@@ -53,15 +68,14 @@ function checkMobile() {
 }
 isMobile = checkMobile();
 
-if (isMobile) { /*$.scrollify.disable();*/ }
-
+if (isMobile) {
+    setInterval(showImgContentMobile, 1000);
+}
 
 $i = 0;
 
 function changeTitle() {
-
     $i++;
-    console.log($i);
     $('.sect-aboutContest h1').removeClass('thisOne');
     setTimeout(function() {
         $('#sentence' + $i).addClass('thisOne')
@@ -119,7 +133,7 @@ function setSection(newSection, index) {
         clearInterval(interval);
     }
 
-    console.log(index);
+
     if (index >= 4) {
         $('.scrollBottom').attr('href', '#sect-1');
         $('.scrollBottom').addClass('top');

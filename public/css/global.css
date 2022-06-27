@@ -194,6 +194,7 @@ svg {
     background-color: #fff;
     border-radius: 10px;
     padding: 5px 5px;
+    z-index: 99;
 }
 
 .socials li img {
@@ -1214,10 +1215,10 @@ input:checked~label {
         position: relative;
         transform: none;
         top: 50%;
-        left: 15%;
+        left: 5%;
         margin-bottom: 100px;
-        width: 70vw;
-        height: 70vw;
+        width: 90vw;
+        height: 94vw;
     }
     .sect-hero .sect-bg {
         height: auto;
