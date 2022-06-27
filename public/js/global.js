@@ -120,7 +120,7 @@ function setSection(newSection, index) {
     }
 
     console.log(index);
-    if (index == 4) {
+    if (index >= 4) {
         $('.scrollBottom').attr('href', '#sect-1');
         $('.scrollBottom').addClass('top');
     } else {
