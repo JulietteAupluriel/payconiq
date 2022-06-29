@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/ncf0qmi.css">
 
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/cookieBubble.css') }}"/>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/global.css') }}"/>
 
@@ -38,7 +39,7 @@
 <body>
   <header>
 
-  <a href="{{ route('/') }}"  class="logo">
+  <a href="@if(app()->isLocale('FR')) https://www.payconiq.be/fr @else https://www.payconiq.be/fr @endif" target="_blank"  class="logo">
     <img src="{{ asset('img/logo.svg') }}">
     </a>
 
@@ -52,9 +53,18 @@
   <footer>
     <div class="wrapper">
     <div id="dwdApp">
+    <div class="about">
+      @if(app()->isLocale('FR'))<p>Vous voulez en savoir plus sur l’appli Payconiq by Bancontact et les paiements mobiles ?<br/> Rendez-vous sur <a href="https://www.payconiq.be/fr" target="_blank">Payconiq.be</a> !</p> @else
+     <p> Meer te weten komen over de Payconiq by Bancontact-app en mobiele betalingen?<br/> Ga naar  <a href="https://www.payconiq.be/nl" target="_blank">Payconiq.be</a> !</p> @endif</div>
       <strong> {{ __('text.downloadApp') }}</strong>
       <a href="https://apps.apple.com/be/app/payconiq-by-bancontact/id858371800" target="_blank">  <img src="{{ asset('img/appstore.png') }}" /></a>
-      <a href="#" target="_blank">  <img src="{{ asset('img/googlePlay.png') }}" /></a>
+
+
+      <a href="@if(app()->isLocale('FR'))  https://play.google.com/store/apps/details?id=mobi.inthepocket.bcmc.bancontact&hl=fr @else  https://play.google.com/store/apps/details?id=mobi.inthepocket.bcmc.bancontact&hl=nl @endif" target="_blank">  <img src="{{ asset('img/googlePlay.png') }}" /></a>
+
+
+     
+
     </div>
     <div class="footerBottom"><p>Powered by <a href="http://www.digizik.com" target="_blank">digizik</a></p>
    
@@ -78,7 +88,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
      <!--  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.2/jquery.scrollify.js"></script>-->
-    <script src="{{ asset('js/global.js') }}"></script>
+     <script src="{{ asset('js/cookieBubble.min.js') }}"></script>
+      <script src="{{ asset('js/global.js') }}"></script>
 
 </body>
 </html>

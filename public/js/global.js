@@ -1,13 +1,23 @@
 $('#gifts').on('click', '.gift', function() {
-
     var selectedGift = $(this).attr('data-rel');
     $('input#gift').val(selectedGift);
     $('#section_form').addClass('active');
 
 })
-$('.close').on('click', function() {
+$('#section_form .close').on('click', function() {
     $('#section_form').removeClass('active');
 })
+$('#popup .close2').on('click', function() {
+    $('#popup').hide();
+})
+$('#popuperror .close2').on('click', function() {
+    $('#popuperror').hide();
+})
+
+$.cookieBubble({
+    messageText: "<b>Faites un choix pour vos données</b><br/>Nous utilisons des cookies pour faire fonctionner nos sites web et optimaliser votre expérience utilisateur. En cliquant sur 'Accepter' vous acceptez le placement de cookies de suivi.<br/>Vous souhaitez en savoir plus, lisez notre <a href='#' target='_blank'>politique de cookies</a>",
+    buttonText: "Accepter"
+});
 
 $('.slider').slick({
     autoplay: true,
@@ -39,7 +49,7 @@ function showImgContent(e) {
 
 }
 
-document.addEventListener('mousemove', showImgContent);
+//document.addEventListener('mousemove', showImgContent);
 
 function showImgContentMobile() {
     x = Math.floor(Math.random() * 11) / 10;
@@ -69,7 +79,7 @@ function checkMobile() {
 isMobile = checkMobile();
 
 if (isMobile) {
-    setInterval(showImgContentMobile, 1000);
+    // setInterval(showImgContentMobile, 1000);
 }
 
 $i = 0;
@@ -150,4 +160,11 @@ function setSection(newSection, index) {
 
 $(document).ready(function() {
     $('#sect-1').addClass('is-active')
+})
+
+$('.sect-onTheRoad .cities .city').on('click', function() {
+    $('.city').removeClass('active');
+    $(this).addClass('active');
+    let activeDay = $(this).attr('data-rel');
+    $('#byDay').removeClass().addClass(activeDay);
 })

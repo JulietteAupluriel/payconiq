@@ -98,14 +98,14 @@
       <img class="theQR" src="{{ asset('img/QOEUR.png') }}" />
     
       @if(app()->isLocale('FR'))
-      <h4>Scannez, Profitez<br/>Hop, <span>c'est gagné</span></h4>
+      <h4>Sortez, Profitez<br/>Hop, <span>c'est gagné</span> !</h4>
      
-      <div class="intro"><p>Cet été, ouvrez grand les yeux, repérez le code QR qui circule à Bruxelles, Liège et Anvers et dégainez votre téléphone pour le scanner. Vous l’avez ? Alors jouez et hop, tentez de gagner </p></div>
-      <div class="thanksTo"><p>Si ce QR code est mobile, c’est grâce à  Smart Mannes/Mini !</p></div>
+      <div class="intro"><p>Cet été, ouvrez grand les yeux, repérez le code QR qui circule à Bruxelles, Liège et Anvers et dégainez votre téléphone pour le scanner. Vous l’avez ? Alors jouez et hop, tentez de gagner !</p></div>
+      <div class="thanksTo"><p>Si ce code QR est mobile, c’est grâce à Jean-Michel Martin Zaventem !</p></div>
 
       @else
       <h4>Samen volop genieten,<br/>  <span>zo verdiend! </span></h4>
-      <div class="intro"><p>   Hou deze zomer je ogen goed open en ga opzoek naar de gigantische QR-code die rondrijdt in Brussel, Antwerpen en Luik. Haal je smartphone boven en scan de QR-code. Gelukt? Speel dan mee en maak kans op leuke prijzen!
+      <div class="intro"><p> Hou deze zomer je ogen goed open en ga opzoek naar de gigantische QR-code die rondrijdt in Brussel, Antwerpen en Luik. Haal je smartphone boven en scan de QR-code. Gelukt? Speel dan mee en maak kans op leuke prijzen!
 
      </p></div>
       <div class="thanksTo"><p>Deze mobiele QR-code werd gerealiseerd door Jean-Michel Martin uit Zaventem! 
@@ -157,13 +157,15 @@
   </div>
 </section>
 
-<section id="sect-5"  class="scrollme day14 sect-onTheRoad">
+<section id="sect-5"  class="scrollme  sect-onTheRoad">
+<div id="byDay" class="day14">
 <div class="pinkShape"></div>
   <div class="table"><div class="cell">
 
   <div class="wrapper">
+    
     <div class="cities">
-      <div class="city active">
+      <div class="city active" data-rel="day14">
         <div class="square" style="background-image:url({{ asset('img/bxl.jpg') }})">
           <div class="table"><div class="cell"><b>14.06</b></div></div>
         </div>
@@ -173,7 +175,7 @@
           <h6>Mont des arts</h6>
       </div>
       </div>
-      <div class="city">
+      <div class="city" data-rel="day15">
         <div class="square" style="background-image:url({{ asset('img/anvers.jpg') }})">
         <div class="table"><div class="cell"><b>15.07</b></div></div>
         </div>
@@ -183,7 +185,7 @@
           <h6>Mont des arts</h6>
         </div>
       </div>
-      <div class="city">
+      <div class="city" data-rel="day16">
         <div class="square" style="background-image:url({{ asset('img/liege.jpg') }})">
         <div class="table"><div class="cell"><b>16.07</b></div></div>
         </div>
@@ -192,16 +194,17 @@
            <h5>{{ __('text.liege') }}</h5>
            <h6>Mont des arts</h6>
         </div>
-      </div>
+      </div></div>
     </div>
 
-  </div> </div> </div>
+  </div> </div>
   <div class="car"><img src="{{ asset('img/voiture.png') }}" /></div>
-
+  </div>
 </section>
 
 <section id="sect-partners"   class="scrollme">
   <div class="wrapper">
+
     <h4>{{ __('text.partner') }}</h4>
     <ul>
       <li><a href="https://jmmartin.bmw.be/" target="_blank"><img src="{{ asset('img/partner.png') }}" /></a></li>
@@ -210,54 +213,55 @@
   </div>
 </section>
 
-   
+@if (session('status'))
+       <div id="popup" class="confirm" style="">
+            <div class="close2">x</div>
+            <div class="table">
+              <div class="cell">
+          
+               <p>  @if(app()->isLocale('FR')) {!! 'Merci d’avoir participé à notre concours THE QR ON TOUR !<br/> Les gagnants seront contactés par e-mail  le 05/08/2022 . <br/>Bonne chance ! ' !!} @else {!! 'Bedankt om deel te nemen aan onze THE QR ON TOUR-wedstrijd! <br/>De winnaars worden op 5 augustus 2022 gecontacteerd via e-mail.<br/> Veel succes!' !!} @endif</p>
+            </div>  </div>  </div>
+      @endif
 
 
-  <div id="section_form"   @if (session('status')) class="active" @endif>
-  <a href="http://payconic.test" class="logo">
-    
+  <div id="section_form"  @if ( $errors->any()) class="active" @endif>
+  <a href="@if(app()->isLocale('FR')) https://www.payconiq.be/fr @else https://www.payconiq.be/fr @endif" target="_blank"  class="logo">
     <img src="{{ asset('img/logo.svg') }}">
-  </a>
+    </a>
 <div class="close">x</div>
   <div class="table"><div class="cell">
 
 
 
-       @if (session('status'))
-            <div class="confirm" style="">
-                {{ App::isLocale('fr') ? 'Merci pour votre commentaire, il sera publié après vérification' : 'Bedankt voor je commentaar, deze wordt na verificatie gepubliceerd' }}
-            </div>
-       @else
+    
   
         <form action="{{ route('participate') }}" method="post" enctype="multipart/form-data">
       
       <div class="wrapForm">
         @csrf
-        @if ($errors->any())
-        @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-            @endif
+
+
+     
+
+
         <div class="wrapSentences"><div class="line">
        
             <span>{{ __('text.Hello') }}</span>
-                <input type="text" name="firstname" id="firstname" required value="" placeholder="{{ __('text.prénom') }}">
-                @error('firstname') <div class="">{{ $message }}</div> @enderror
-              <input type="text" name="name" id="name" required value=""  placeholder="{{ __('text.nom') }}">
-                @error('name') <div class="">{{ $message }}</div> @enderror
+                <input type="text" name="firstname" id="firstname" required value="{{ old('firstname') }}" placeholder="{{ __('text.prénom') }}">
+              
+              <input type="text" name="name" id="name" required value="{{ old('name') }}"  placeholder="{{ __('text.nom') }}">
+            
       </div>
 
       <div class="line">
        
        <span>{{ __('text.jeviensde') }}</span>
-       <input type="text" name="city" id="city" required value=""  placeholder="{{ __('text.ville') }}">
-            @error('city') <div class="">{{ $message }}</div> @enderror
+       <input type="text" name="city" id="city" required value="{{ old('city') }}"  placeholder="{{ __('text.ville') }}">
       </div>
 
       <div class="line">
             <span>{{ __('text.etmonadresse') }}</span>
-            <input type="text" name="email" id="email" required value=""  placeholder="{{ __('text.email') }}" >
-            @error('email') <div class="">{{ $message }}</div> @enderror
+            <input type="email" name="email" id="email" required value=""  placeholder="{{ __('text.email') }}" >
             </div>
 
       
@@ -265,8 +269,7 @@
 
         <fieldset style="display:none">
             <label>Gift</label>
-            <input type="text" name="gift" id="gift" value="" >
-            @error('gift') <div class="">{{ $message }}</div> @enderror
+            <input type="text" name="gift" id="gift" value="{{ old('gift') }}" >
         </fieldset>
 
 
@@ -280,37 +283,34 @@
           
            
 
-           <ul class="radio">
+           <ul class="radio" required>
             <li>
-            <input type="radio" value="reponse1" id="question1" name="question1">
+            <input type="radio" value="reponse1" id="question1" name="question1"  {{ (old('question1') == 'reponse1') ? 'checked' : ''}}>
               <label for="question1">{{ __('text.rep1') }}</label>
-              
               <div class="check"></div>
             </li>
             
             <li>
-            <input type="radio" value="reponse2" id="question2" name="question1">
+            <input type="radio" value="reponse2" id="question2" name="question1"  {{ (old('question2') == 'reponse2') ? 'checked' : '' }}>
               <label for="question2">{{ __('text.rep2') }}</label>
               
               <div class="check"><div class="inside"></div></div>
             </li>
             
             <li>
-              <input type="radio" value="reponse32" id="question3" name="question1">
+              <input type="radio" value="reponse3" id="question3" name="question1"  {{ (old('question3') == 'reponse3') ? 'checked' : '' }}>
               <label for="question3">{{ __('text.rep3') }}</label>
               
               <div class="check"><div class="inside"></div></div>
             </li>
           </ul>
            
-            @error('question1') <div class="">{{ $message }}</div> @enderror
         </fieldset>
 
         <fieldset class="subsidiary">
             <label><strong>{{ __('text.question2-lab') }}</strong></label>
             <p>{{ __('text.question2') }} </p>
-            <input type="text" name="question2" id="question2" value="" >
-            @error('question2') <div class="">{{ $message }}</div> @enderror
+            <input type="number" name="question2" id="question2" required value="" >
         </fieldset>
 
       </div>
@@ -339,8 +339,27 @@
       </div>
 </div>
     </form>
+
+    @if ( $errors->any()) <div id="popuperror">
+
+    <div class="close2">x</div>
+              <div class="table"><div class="cell">
+
+              @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <p>  
+             @error('email')   @if(app()->isLocale('FR')) {!! 'Désolé, tu ne peux participer qu’une seule fois au concours THE QR ON TOUR. <br/>Encore un peu de patience, les gagnants seront contactés par e-mail le 05/08/2022 !<br/> Bonne chance !'!!} @else {!! 'Het spijt ons, je kan maar één keer deelnemen aan de THE QR ON TOUR-wedstrijd. <br/>Nog even geduld, de winnaars worden op 5 augustus 2022 gecontacteerd via e-mail.<br/> Veel succes! ' !!} @endif @enderror </p>
+
+          @endforeach
+          @endif
+
+              
+            </div>  </div> 
+
+       </div> @endif
+
 </div>
-@endif
+
 
 </div></div>
 </section>

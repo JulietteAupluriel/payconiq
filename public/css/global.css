@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     border: none;
-    font-family: sofia-pro, sans-serif;
+    font-family: sofia-pro-condensed, sans-serif;
     box-sizing: border-box;
 }
 
@@ -311,7 +311,6 @@ section {
     color: #fff;
     font-size: 55px;
     text-transform: uppercase;
-    font-family: sofia-pro, sans-serif;
     font-weight: bold;
     line-height: 56px;
     width: 50%;
@@ -365,14 +364,12 @@ section {
 .sect-aboutContest .aboutContest .wrapBox h3 {
     color: #f9dc0a;
     text-transform: uppercase;
-    font-family: sofia-pro-condensed, sans-serif;
     margin-bottom: 50px;
     font-size: 50px;
     line-height: 20px;
 }
 
 .sect-aboutContest .aboutContest .wrapBox h4 {
-    font-family: sofia-pro-condensed, sans-serif;
     text-transform: uppercase;
     color: #fff;
     font-size: 45px;
@@ -571,6 +568,7 @@ section {
     text-align: center;
     margin: 0 3vw;
     width: 20vw;
+    cursor: pointer;
 }
 
 .sect-onTheRoad .cities .city .square {
@@ -582,7 +580,7 @@ section {
     background-repeat: no-repeat;
     background-size: 0%;
     background-position: center center;
-    transition: all 0.5s ease 0.2s;
+    transition: transform 0.5s ease 0.2s;
 }
 
 .sect-onTheRoad .cities .city.active .square {
@@ -592,6 +590,7 @@ section {
 
 .sect-onTheRoad .cities .city:hover .square {
     transform: translateY(-60px);
+    background-size: 100%;
 }
 
 .sect-onTheRoad .cities .city .square b {
@@ -600,7 +599,8 @@ section {
     transition: all 0.5s ease 0.2s;
 }
 
-.sect-onTheRoad.is-active .cities .city.active .square b {
+.sect-onTheRoad.is-active .cities .city.active .square b,
+.sect-onTheRoad.is-active .cities .city:hover .square b {
     display: none;
 }
 
@@ -655,15 +655,19 @@ section {
     transition: left 1.5s ease-out 0.5s;
 }
 
-.sect-onTheRoad.day14.is-active .car {
+#byDay {
+    height: 100%;
+}
+
+.sect-onTheRoad.is-active .day14 .car {
     left: 0%;
 }
 
-.sect-onTheRoad.day15.is-active .car {
+.sect-onTheRoad.is-active .day15 .car {
     left: 30%;
 }
 
-.sect-onTheRoad.day16.is-active .car {
+.sect-onTheRoad.is-active .day16 .car {
     left: 60%;
 }
 
@@ -681,11 +685,11 @@ section {
 
 #sect-partners h4 {
     color: #fd5983;
-    font-size: 50px;
+    font-size: 35px;
     line-height: 50px;
     display: inline-block;
     vertical-align: sub;
-    margin-right: 70px;
+    margin-right: 30px;
 }
 
 #sect-partners ul {
@@ -715,7 +719,7 @@ footer {
 footer #dwdApp {
     position: absolute;
     right: 0;
-    top: -20px;
+    top: -50px;
     background: #ff4682;
     color: #fff;
     padding: 40px;
@@ -747,6 +751,21 @@ footer #dwdApp a:hover {
 footer #dwdApp a img {
     display: block;
     height: 40px;
+}
+
+footer #dwdApp .about {
+    line-height: 20px;
+    font-size: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+footer #dwdApp .about a {
+    text-decoration: underline;
+    font-size: 15px;
+    margin: 0;
+    display: inline;
+    vertical-align: baseline;
 }
 
 footer p a {
@@ -784,6 +803,17 @@ footer p a {
     font-size: 0;
 }
 
+.close2 {
+    width: 60px;
+    height: 60px;
+    background: #0b2265 url(../img/close.svg) no-repeat center center / auto 25px;
+    border-radius: 10px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 0;
+}
+
 #section_form form {
     display: inline-block;
     text-align: left;
@@ -794,28 +824,34 @@ footer p a {
 }
 
 .wrapSentences span {
-    font-size: 55px;
+    font-size: 50px;
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-shadow: 0px 0px 5.95px rgba(19, 19, 20, 0.15);
 }
 
-.wrapSentences input[type="text"] {
+.wrapSentences input[type="text"],
+.wrapSentences input[type="email"] {
     background-color: transparent;
     border-bottom: 1px solid #fff;
-    font-size: 38px;
+    font-size: 25px;
     color: #fff;
     max-width: 230px;
     margin-left: 20px;
 }
 
+.wrapMoreQuestions input[type="number"],
 .wrapMoreQuestions input[type="text"] {
     background-color: transparent;
     border-bottom: 1px solid #fff;
-    font-size: 28px;
+    font-size: 20px;
     color: #fff;
     max-width: 230px;
     margin-left: 20px;
+}
+
+.wrapMoreQuestions input[type="number"] {
+    max-width: 70px;
 }
 
 input::placeholder {
@@ -903,7 +939,6 @@ h4 span {
 
 h4 span {
     color: #f9dc0a;
-    font-family: sofia-pro-condensed, sans-serif
 }
 
 .sect-aboutContest h1 span:before {
@@ -1361,5 +1396,41 @@ input:checked~label {
 
 .contentText a {
     text-decoration: underline;
+    color: #fff;
+}
+
+#popup.confirm {
+    position: fixed;
+    top: 10Vh;
+    height: 80vh;
+    width: 80vw;
+    left: 10vw;
+    padding: 5%;
+    background-color: #fd5983;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 0 30px rgb(140 23 23 / 80%);
+}
+
+#popup.confirm p {
+    font-size: 30px;
+    color: #fff;
+}
+
+#popuperror {
+    position: fixed;
+    top: 40%;
+    height: auto;
+    width: 80vw;
+    left: 10vw;
+    padding: 5%;
+    background-color: #0b2265;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 0 30px rgb(140 23 23 / 80%);
+}
+
+#popuperror p {
+    font-size: 25px;
     color: #fff;
 }
