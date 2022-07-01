@@ -154,7 +154,7 @@ li {
     /* clip-path: circle(75px at var(--x) var(--y)); */
     /* clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); */
     clip-path: url(#cp3);
-    /* animation: grow infinite alternate ease-in-out 10s; */
+    animation: animbg infinite alternate ease-in-out 10s;
     width: 40vw;
     height: 40vw;
     background-size: cover;
@@ -169,6 +169,29 @@ li {
     -ms-transition: 0.7s ease all;
     -o-transition: 0.7s ease all;
     transition: 0.7s ease all;
+    background-size: 130%;
+    /* animation: animbg 12s ease-in-out infinite 0.7s alternate-reverse;*/
+}
+
+@keyframes animbg {
+    0% {}
+    5% {
+        opacity: 1;
+    }
+    50% {
+        background-color: #fff;
+        opacity: 1;
+        background-size: 130%;
+    }
+    70% {
+        /*background-size: 130%;*/
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        background-color: transparent;
+        background-size: 160%;
+    }
 }
 
 .sect-hero.is-active .bgForAnim {
