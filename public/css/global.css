@@ -672,15 +672,15 @@ section {
 
 .sect-onTheRoad .cities .city .date {
     display: none;
+    color: #fff;
+    font-weight: bold;
 }
 
 .sect-onTheRoad.is-active .cities .city.active .date,
 .sect-onTheRoad .cities .city:hover .date {
     display: block;
     font-size: 80px;
-    color: #fff;
     line-height: 95px;
-    font-weight: bold;
 }
 
 .sect-onTheRoad .car {
@@ -1401,6 +1401,9 @@ input:checked~label {
     }
     .sect-onTheRoad .cities .city:hover .square {
         transform: translateY(0px);
+    }
+    .sect-onTheRoad .cities .city.active .square b {
+        display: none;
     }
 }
 
