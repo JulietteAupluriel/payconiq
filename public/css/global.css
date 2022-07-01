@@ -2,8 +2,23 @@
     margin: 0;
     padding: 0;
     border: none;
-    font-family: sofia-pro-condensed, sans-serif;
+    font-family: sofia-pro, sans-serif;
     box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span {
+    font-family: sofia-pro-condensed, sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 html {
@@ -489,7 +504,6 @@ section {
     padding: 30px;
     color: #fff;
     font-size: 24px;
-    font-weight: bold;
 }
 
 .sect-diaporama {
@@ -935,6 +949,8 @@ h4 span {
     z-index: 3;
     margin-right: 10px;
     position: relative;
+    padding: 3px 0 11px 0px;
+    line-height: 28px;
 }
 
 h4 span {
@@ -963,6 +979,14 @@ h4 span:before {
     height: 100%;
     z-index: -1;
     position: absolute;
+}
+
+.sect-aboutContest h4 span {
+    color: #f8406e;
+}
+
+.sect-aboutContest h4 span:before {
+    background-color: #f9dc0a;
 }
 
 .sect-aboutContest h1 {
