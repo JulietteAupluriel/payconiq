@@ -71,9 +71,9 @@
     <h1 id="sentence1" class="">Le code QR<br/> qui vous fait <span>sourire</span> !</h1>
     <h1 id="sentence2">Restez <span>vous-même </span>!</h1>
     <h1 id="sentence3"><span>Souriez</span>,<br/> vous êtes<br/>magnifique !</h1>
-    <h1 id="sentence4"><span>Vos rêves</span><br/> vous attendent</h1>
-    <h1 id="sentence5">Vous rayonnez<br/> <span>comme un soleil</span></h1>
-    <h1 id="sentence6"><span>Rien</span><br/> n’est impossible</h1>
+    <h1 id="sentence4"><span>Vos rêves</span><br/> vous attendent !</h1>
+    <h1 id="sentence5">Vous rayonnez<br/> <span>comme un soleil</span> !</h1>
+    <h1 id="sentence6"><span>Rien</span><br/> n’est impossible !</h1>
 
     
 @else
@@ -101,15 +101,13 @@
       <h4>Sortez, Profitez<br/>Hop, <span>c'est gagné</span> !</h4>
      
       <div class="intro"><p>Cet été, ouvrez grand les yeux, repérez le code QR qui circule à Bruxelles, Liège et Anvers et dégainez votre téléphone pour le scanner. Vous l’avez ? Alors jouez et hop, tentez de gagner !</p></div>
-      <div class="thanksTo"><p>Si ce code QR est mobile, c’est grâce à Jean-Michel Martin Zaventem !</p></div>
 
       @else
       <h4>Samen volop genieten,<br/>  <span>zo verdiend! </span></h4>
       <div class="intro"><p> Hou deze zomer je ogen goed open en ga opzoek naar de gigantische QR-code die rondrijdt in Brussel, Antwerpen en Luik. Haal je smartphone boven en scan de QR-code. Gelukt? Speel dan mee en maak kans op leuke prijzen!
 
      </p></div>
-      <div class="thanksTo"><p>Deze mobiele QR-code werd gerealiseerd door Jean-Michel Martin uit Zaventem! 
-</p></div>
+     
    
       @endif
 

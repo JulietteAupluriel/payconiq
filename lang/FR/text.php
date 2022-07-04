@@ -2,7 +2,7 @@
 
 return [
 
-    'downloadApp' => 'Télécharger l\'application',
+    'downloadApp' => 'Téléchargez l\'application',
     'bruxelles' => 'Bruxelles',
     'anvers' => "Anvers",
     'liege' => "Liège",
