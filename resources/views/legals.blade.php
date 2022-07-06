@@ -19,9 +19,9 @@
         <section id="sect-legals">
          <div class="wrapper"> <h1>Mentions legales</h1>
 		<div class="contentText">
-                <p>La présente politique en matière de gestion des cookies décrit les différents types de cookies qui peuvent être utilisés sur le site www.gordonknight.be (ci-après, le "Site Web") et la manière dont vous pouvez gérer ces cookies.
+                <p>La présente politique en matière de gestion des cookies décrit les différents types de cookies qui peuvent être utilisés sur le site www.payconiq.be (ci-après, le "Site Web") et la manière dont vous pouvez gérer ces cookies.
 </p>
-<p>john Martin S.A. s'engage à être transparent vis-à-vis des technologies utilisées sur le Site Web.</p>
+<p>xxx S.A. s'engage à être transparent vis-à-vis des technologies utilisées sur le Site Web.</p>
 
 <h4>Qu’est-ce qu’un cookie ?</h4>
 
@@ -35,7 +35,7 @@
 <ul>
     <li>XSRF-TOKEN&nbsp;: permet d’enregistrer les données de session permettant le passage d’une page à l’autre sans perte d’information. Ce cookie est indispensable pour le bon fonctionnement et affichage du Site Web&nbsp;;</li>
 
-    <li>gordon_session&nbsp;: permet de conserver le choix de la langue choisie par l’utilisateur.</li>
+    <li>payconiq_session&nbsp;: permet de conserver le choix de la langue choisie par l’utilisateur.</li>
 </ul>
 
 <p>Pour ce type de cookies, seule une obligation d’information s’applique, et ces cookies sont placés dès que vous accédez au Site Web. 
@@ -72,7 +72,7 @@ La suppression de ces cookies peut toutefois entraîner des problèmes de naviga
 
 <h4>autre question&nbsp;?</h4>
 
-<p>Pour toute information au sujet de l’utilisation des cookies sur notre Site Web, vous pouvez nous contacter par courriel à <a href="mailto:info@sweetglobe.be">info@sweetglobe.be</a> ou par courrier à l’adresse suivante&nbsp;: Chau. de Charleroi 591, 1410 Waterloo </p>
+<p>Pour toute information au sujet de l’utilisation des cookies sur notre Site Web, vous pouvez nous contacter par courriel à <a href="mailto:xxx">xxx</a> ou par courrier à l’adresse suivante&nbsp;:  </p>
             
 
             </div></div>

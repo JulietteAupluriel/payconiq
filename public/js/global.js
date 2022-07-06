@@ -15,7 +15,7 @@ $('#popuperror .close2').on('click', function() {
 })
 
 $.cookieBubble({
-    messageText: "<b>Faites un choix pour vos données</b><br/>Nous utilisons des cookies pour faire fonctionner nos sites web et optimaliser votre expérience utilisateur. En cliquant sur 'Accepter' vous acceptez le placement de cookies de suivi.<br/>Vous souhaitez en savoir plus, lisez notre <a href='#' target='_blank'>politique de cookies</a>",
+    messageText: "<b>Faites un choix pour vos données</b><br/>Nous utilisons des cookies pour faire fonctionner nos sites web et optimaliser votre expérience utilisateur. En cliquant sur 'Accepter' vous acceptez le placement de cookies de suivi.<br/>Vous souhaitez en savoir plus, lisez notre <a href='/legals' target='_blank'>politique de cookies</a>",
     buttonText: "Accepter"
 });
 
@@ -30,7 +30,7 @@ $('.slider').slick({
 
 
 
-var varaibleAjust = Math.random();
+//var varaibleAjust = Math.random();
 var moveleft = 0;
 var moveleft2 = 0;
 var x = 0;

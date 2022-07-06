@@ -197,6 +197,21 @@
 
   </div> </div>
   <div class="car"><img src="{{ asset('img/voiture.png') }}" /></div>
+  <div id="dwdApp">
+    <div class="about">
+      @if(app()->isLocale('FR'))<h4>Payez mobile. Sûr et facile. </h4><p>Vous voulez en savoir plus sur l’appli Payconiq by Bancontact et les paiements mobiles ?<br/> Rendez-vous sur <a href="https://www.payconiq.be/fr" target="_blank">Payconiq.be</a> !</p> @else
+      <h4>Betaal gerust mobiel. </h4> <p> Meer te weten komen over de Payconiq by Bancontact-app en mobiele betalingen?<br/> Ga naar  <a href="https://www.payconiq.be/nl" target="_blank">Payconiq.be</a> !</p> @endif</div>
+      
+        <strong> {{ __('text.downloadApp') }}</strong>
+      <a href="https://apps.apple.com/be/app/payconiq-by-bancontact/id858371800" target="_blank">  <img src="{{ asset('img/appstore.png') }}" /></a>
+
+
+      <a href="@if(app()->isLocale('FR'))  https://play.google.com/store/apps/details?id=mobi.inthepocket.bcmc.bancontact&hl=fr @else  https://play.google.com/store/apps/details?id=mobi.inthepocket.bcmc.bancontact&hl=nl @endif" target="_blank">  <img src="{{ asset('img/googlePlay.png') }}" /></a>
+
+
+     
+
+    </div>
   </div>
 </section>
 
@@ -204,6 +219,7 @@
   <div class="wrapper">
 
     <h4>{{ __('text.partner') }}</h4>
+
     <ul>
       <li><a href="https://jmmartin.bmw.be/" target="_blank"><img src="{{ asset('img/partner.png') }}" /></a></li>
     </ul>

@@ -52,20 +52,7 @@
     </main>
   <footer>
     <div class="wrapper">
-    <div id="dwdApp">
-    <div class="about">
-      @if(app()->isLocale('FR'))<h4>Payez mobile. Sûr et facile. </h4><p>Vous voulez en savoir plus sur l’appli Payconiq by Bancontact et les paiements mobiles ?<br/> Rendez-vous sur <a href="https://www.payconiq.be/fr" target="_blank">Payconiq.be</a> !</p> @else
-        <h4>Betaal gerust mobiel. </h4> <p> Meer te weten komen over de Payconiq by Bancontact-app en mobiele betalingen?<br/> Ga naar  <a href="https://www.payconiq.be/nl" target="_blank">Payconiq.be</a> !</p> @endif</div>
-      <strong> {{ __('text.downloadApp') }}</strong>
-      <a href="https://apps.apple.com/be/app/payconiq-by-bancontact/id858371800" target="_blank">  <img src="{{ asset('img/appstore.png') }}" /></a>
-
-
-      <a href="@if(app()->isLocale('FR'))  https://play.google.com/store/apps/details?id=mobi.inthepocket.bcmc.bancontact&hl=fr @else  https://play.google.com/store/apps/details?id=mobi.inthepocket.bcmc.bancontact&hl=nl @endif" target="_blank">  <img src="{{ asset('img/googlePlay.png') }}" /></a>
-
-
-     
-
-    </div>
+   
     <div class="footerBottom"><p>Powered by <a href="http://www.digizik.com" target="_blank">digizik</a></p>
    
     @if(app()->isLocale('FR'))
