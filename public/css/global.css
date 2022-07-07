@@ -1309,15 +1309,15 @@ input:checked~label {
         left: -5%!important;
         margin-top: 0;
     }
-    .sect-onTheRoad.is-active .day14 .car {
+    .sect-onTheRoad .day14 .car {
         left: -5%!important;
         top: 170px!important;
     }
-    .sect-onTheRoad.is-active .day15 .car {
+    .sect-onTheRoad .day15 .car {
         left: -5%!important;
         top: 300px!important;
     }
-    .sect-onTheRoad.is-active .day16 .car {
+    .sect-onTheRoad .day16 .car {
         left: -5%!important;
         top: 450px!important;
     }
