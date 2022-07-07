@@ -1305,7 +1305,7 @@ input:checked~label {
         align-self: center;
     }
     .sect-onTheRoad .car {
-        top: 170px!important;
+        top: 170px;
         left: -5%!important;
         margin-top: 0;
     }
