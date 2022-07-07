@@ -341,10 +341,10 @@
               
                 @if(app()->isLocale('FR'))
                 J’ai compris et j’accepte les 
-                <a href="{{ route('legals') }}" target="_blank">
+                <a href="{{ route('legals') }}?locale=FR" target="_blank">
                 conditions de participation</a>
                 @else
-                Ik heb de wedstrijdvoorwaarden gelezen en  <a href="{{ route('legals') }}" target="_blank">aanvaard ze</a>
+                Ik heb de wedstrijdvoorwaarden gelezen en  <a href="{{ route('legals') }}?locale=NL" target="_blank">aanvaard ze</a>
                 @endif
               </label>
               <div class="check"><div class="inside"></div></div>
