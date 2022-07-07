@@ -160,9 +160,15 @@ $(document).ready(function() {
 })
 
 
-
 if (isMobile) {
     $('.sect-onTheRoad .cities .city').on('hover', function() {
+        $('.city').removeClass('active');
+        $(this).addClass('active');
+        let activeDay = $(this).attr('data-rel');
+        $('#byDay').removeClass().addClass(activeDay);
+    })
+} else {
+    $('.sect-onTheRoad .cities .city').on('click', function() {
         $('.city').removeClass('active');
         $(this).addClass('active');
         let activeDay = $(this).attr('data-rel');
