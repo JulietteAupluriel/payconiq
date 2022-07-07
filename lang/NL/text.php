@@ -5,7 +5,7 @@ return [
     'bruxelles' => 'BRUSSEL',
     'anvers' => "ANTWERPEN",
     'liege' => "LUIK",
-    'giftQuestion' => "Wat zou jouw zomer nog mooier kunnen maken?  ",
+    'giftQuestion' => "Neem deel aan onze wedstrijd en maak kans op één van onderstaande uitjes. Klik op de prijs die je graag zou willen winnen!  ",
     'gift1' => 'Even ontsnappen in de natuur',
     'gift2' => 'Een Vespatocht met vrienden',
     'gift3' => 'Een dagje relaxen in de wellness',

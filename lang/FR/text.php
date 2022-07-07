@@ -6,7 +6,7 @@ return [
     'bruxelles' => 'Bruxelles',
     'anvers' => "Anvers",
     'liege' => "Liège",
-    'giftQuestion' => "Qu'est ce qui vous ferait plaisir cet été ?",
+    'giftQuestion' => "Participez à notre concours et tentez votre chance pour remporter une de ces escapades ! Cliquez sur le prix que vous souhaitez gagner ! ",
     'gift1' => 'Une escapade dans la nature',
     'gift2' => 'Une escapade en Vespa entre ami·e·s ',
     'gift3' => 'Une journée détente dans un spa',

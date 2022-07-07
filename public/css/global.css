@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: default;
+    margin: 0;
+}
+
 @font-face {
     font-family: SofiaProBlackCondensed;
     font-weight: 400;
@@ -448,9 +454,11 @@ section {
 .sect-chooseAGift h2 {
     color: #fd5983;
     margin-bottom: 60px;
-    font-size: 45px;
-    line-height: 45px;
+    font-size: 25px;
+    line-height: 29px;
+    max-width: 890px;
     opacity: 0;
+    margin: 0 auto 40px auto;
     -webkit-transition: 0.7s ease all;
     -moz-transition: 0.7s ease all;
     -ms-transition: 0.7s ease all;
@@ -747,7 +755,7 @@ section {
 }
 
 #sect-partners ul li img {
-    max-height: 80px;
+    max-height: 50px;
 }
 
 
@@ -1343,7 +1351,9 @@ input:checked~label {
         font-size: 35px;
         display: block;
     }
-    .wrapSentences input[type="text"] {
+    .wrapSentences input[type="text"],
+    .wrapSentences input[type="email"],
+    .wrapSentences input[type="number"] {
         margin: 0 20px 0 0;
         font-size: 30px;
         margin-bottom: 20px;
@@ -1415,6 +1425,9 @@ input:checked~label {
     }
     .sect-onTheRoad .cities .city.active .square b {
         display: none;
+    }
+    .wrapSubmit input[type="submit"] {
+        margin-top: 20px;
     }
 }
 

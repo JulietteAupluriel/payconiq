@@ -324,7 +324,7 @@
         <fieldset class="subsidiary">
             <label><strong>{{ __('text.question2-lab') }}</strong></label>
             <p>{{ __('text.question2') }} </p>
-            <input type="number" name="question2" id="question2" required value="" >
+            <input type="number" inputmode="numeric" name="question2" id="question2" required value="" >
         </fieldset>
 
       </div>
