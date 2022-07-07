@@ -7,7 +7,7 @@
     <title>Payconiq | The QR on tour</title>
     <link rel="stylesheet" href="https://use.typekit.net/ncf0qmi.css">
 
-    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/cookieBubble.css') }}"/>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/global.css') }}"/>
