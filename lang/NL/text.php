@@ -17,7 +17,7 @@ return [
     'prénom' => 'voornaam',
     'email' => 'e-mail',
     'ville' => 'stad',
-    'partner' => 'Deze mobiele QR-code werd gerealiseerd door ',
+    'partner' => 'Deze QR-code rijdt rond mede dankzij ',
     'question1' => 'Wat is de laatste nieuwe functionaliteit die werd gelanceerd in de Payconiq by Bancontact-app? ',
     'rep1' => 'De rekening delen onder je vrienden?',
     'rep2' => 'Een betaalverzoek versturen?',
