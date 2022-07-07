@@ -18,7 +18,7 @@ return [
     'prénom' => 'Prénom',
     'email' => 'Email',
     'ville' => 'Ville',
-    'partner' => 'Si ce code QR est mobile, c’est en autre grâce à',
+    'partner' => 'Si ce code QR est mobile, c’est entre autre grâce à',
     'question1' => 'Quelle est la dernière fonctionnalité qui a été lancée dans l’application Payconiq by Bancontact ?',
     'rep1' => 'Diviser l’addition entre vos amis ?',
     'rep2' => 'Envoyer une demande de paiement ?',
