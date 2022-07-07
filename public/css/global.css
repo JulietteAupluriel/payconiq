@@ -1463,7 +1463,7 @@ input:checked~label {
 #sect-legals h1 {
     text-align: center;
     color: #fff;
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 50px;
 }
 
@@ -1471,9 +1471,18 @@ input:checked~label {
     color: #fff;
 }
 
+.contentText h3 {
+    margin: 50px 0 30px 0;
+}
+
 .contentText p,
 .contentText ul {
     margin-bottom: 10px;
+}
+
+.contentText ul li {
+    list-style: circle inside;
+    padding-left: 30px;
 }
 
 .contentText h4 {

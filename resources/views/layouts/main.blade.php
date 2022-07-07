@@ -70,6 +70,27 @@
 </div>
   </footer>
 
+
+  <div id="cookieText" style="display:none">
+  @if(app()->isLocale('FR'))
+
+Nous utilisons des cookies pour faire fonctionner nos sites web et optimaliser votre expérience utilisateur. En cliquant sur 'Accepter' vous acceptez le placement de cookies de suivi.<br/>Vous souhaitez en savoir plus, lisez notre <a href='/legals' target='_blank'>politique de cookies</a>
+@else
+Payconiq gebruikt cookies op deze site. Met uw toestemming zullen wij ze gebruiken voor de doeleinden zoals uiteengezet in onze <a href='/legals' target='_blank'>Cookieverklaring.</a>
+
+
+@endif
+</div>
+
+<div id="cookieBtn" style="display:none">
+  @if(app()->isLocale('FR'))
+  Accepter
+@else
+Accepteren
+@endif
+</div>
+
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
       <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
