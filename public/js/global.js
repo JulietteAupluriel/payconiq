@@ -78,9 +78,6 @@ function checkMobile() {
 }
 isMobile = checkMobile();
 
-if (isMobile) {
-    // setInterval(showImgContentMobile, 1000);
-}
 
 $i = 0;
 
@@ -162,9 +159,13 @@ $(document).ready(function() {
     $('#sect-1').addClass('is-active')
 })
 
-$('.sect-onTheRoad .cities .city').on('click', function() {
-    $('.city').removeClass('active');
-    $(this).addClass('active');
-    let activeDay = $(this).attr('data-rel');
-    $('#byDay').removeClass().addClass(activeDay);
-})
+
+
+if (isMobile) {
+    $('.sect-onTheRoad .cities .city').on('hover', function() {
+        $('.city').removeClass('active');
+        $(this).addClass('active');
+        let activeDay = $(this).attr('data-rel');
+        $('#byDay').removeClass().addClass(activeDay);
+    })
+}
