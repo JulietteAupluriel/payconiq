@@ -133,7 +133,7 @@ Les parties tenteront néanmoins de régler à l'amiable l'éventuel litige avan
 
 
             <div class="wrapper"> 
-                <h1>    WEDSTRIJDREGLEMENT <br/>Wedstrijd THE QR ON TOUR</h1>
+                <h1>WEDSTRIJDREGLEMENT <br/>Wedstrijd THE QR ON TOUR</h1>
                 <div class="contentText">
         
 <h3>Algemeen</h3>

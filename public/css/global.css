@@ -737,7 +737,7 @@ section {
 
 #sect-partners h4 {
     color: #fd5983;
-    font-size: 35px;
+    font-size: 23px;
     line-height: 50px;
     display: inline-block;
     vertical-align: sub;
@@ -755,7 +755,7 @@ section {
 }
 
 #sect-partners ul li img {
-    max-height: 50px;
+    max-height: 40px;
 }
 
 

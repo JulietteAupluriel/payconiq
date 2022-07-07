@@ -56,10 +56,10 @@
     <div class="footerBottom"><p>Powered by <a href="http://www.digizik.com" target="_blank">digizik</a></p>
    
     @if(app()->isLocale('FR'))
-     <p>Politique de protection des <a href="{{ route('legals') }}">données</a></p>
+     <p>Politique de protection des <a href="{{ route('legals') }}?locale=FR">données</a></p>
     <p><a href="https://www.payconiq.be/fr/declaration-de-confidentialite-et-conditions-generales">Déclarations de Confidentialité et Conditions générales</a> 
 @else
-<p><a href="{{ route('legals') }}">Gegevensbeschermingsbeleid</a></p>
+<p><a href="{{ route('legals') }}?locale=NL">Gegevensbeschermingsbeleid</a></p>
     <p><a href="https://www.payconiq.be/nl/privacyverklaring-en-algemene-voorwaarden">Privacyverklaring en Algemene voorwaarden </a> 
 @endif
 
@@ -74,9 +74,9 @@
   <div id="cookieText" style="display:none">
   @if(app()->isLocale('FR'))
 
-Nous utilisons des cookies pour faire fonctionner nos sites web et optimaliser votre expérience utilisateur. En cliquant sur 'Accepter' vous acceptez le placement de cookies de suivi.<br/>Vous souhaitez en savoir plus, lisez notre <a href='/legals' target='_blank'>politique de cookies</a>
+Nous utilisons des cookies pour faire fonctionner nos sites web et optimaliser votre expérience utilisateur. En cliquant sur 'Accepter' vous acceptez le placement de cookies de suivi.<br/>Vous souhaitez en savoir plus, lisez notre <a href='/legals?locale=FR' target='_blank'>politique de cookies</a>
 @else
-Payconiq gebruikt cookies op deze site. Met uw toestemming zullen wij ze gebruiken voor de doeleinden zoals uiteengezet in onze <a href='/legals' target='_blank'>Cookieverklaring.</a>
+Payconiq gebruikt cookies op deze site. Met uw toestemming zullen wij ze gebruiken voor de doeleinden zoals uiteengezet in onze <a href='/legals?locale=NL' target='_blank'>Cookieverklaring.</a>
 
 
 @endif

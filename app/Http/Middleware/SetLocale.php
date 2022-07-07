@@ -39,7 +39,6 @@ if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 foreach ($langs as $lang => $val) {
 
 	if (strpos($lang, 'nl') === 0) {
-        
         session(['locale' => 'NL']);
         $locale = 'NL'; 
         app()->setLocale($locale);
