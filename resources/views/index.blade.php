@@ -136,8 +136,8 @@
       <div><img src="{{ asset('img/slide1.jpg') }}"></div>
       <div><img src="{{ asset('img/slide2.jpg') }}"></div>
       <div><img src="{{ asset('img/slide3.jpg') }}"></div>
-      <div><img src="{{ asset('img/slide4.jpg') }}"></div>
-      <div><img src="{{ asset('img/slide5.jpg') }}"></div>
+      @if(app()->isLocale('FR'))  <div><img src="{{ asset('img/slide4.jpg') }}"></div>@endif
+      @if(app()->isLocale('NL'))  <div><img src="{{ asset('img/slide5.jpg') }}"></div>@endif
   </div>
   <div class="sliderNav">
     <div class="prev"></div>
