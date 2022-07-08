@@ -38,7 +38,15 @@
 
 <body>
   <header>
-
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NGRBGHFV78"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-NGRBGHFV78');
+</script>
   <a href="@if(app()->isLocale('FR')) https://www.payconiq.be/fr @else https://www.payconiq.be/fr @endif" target="_blank"  class="logo">
     <img src="{{ asset('img/logo.svg') }}">
     </a>

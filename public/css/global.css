@@ -471,6 +471,11 @@ section {
     transform: translate3D(0, 30px, 0);
 }
 
+.sect-chooseAGift h2.soon {
+    font-size: 45px;
+    line-height: 50px;
+}
+
 .sect-chooseAGift.is-active h2 {
     opacity: 1;
     -webkit-transform: translate3D(0, 0px, 0);
