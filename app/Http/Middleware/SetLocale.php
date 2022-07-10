@@ -47,6 +47,7 @@ foreach ($langs as $lang => $val) {
         $locale = 'FR'; 
         app()->setLocale($locale);
 	} 
+   
 }
 
 // show default site or prompt for language
@@ -56,9 +57,13 @@ foreach ($langs as $lang => $val) {
         }
 
         $locale = session('locale', app()->getLocale());
-
-        app()->setLocale($locale);
-
+if($locale=='FR' || $locale =='NL'){ 
+   
+        
+    }
+    else{  $locale ='FR';}
+   
+    app()->setLocale($locale);
         return $next($request);
     }
 }
