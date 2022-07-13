@@ -123,21 +123,10 @@
 <div class="pinkShape"></div>
   <div class="table"><div class="cell">
     <div class="wrapper">
-      <h2>{{ __('text.giftQuestion') }}</h2>
-      <div id="gifts">
-        <article data-rel="Le cadeau numero 1" class="gift">
-            <div class="pict"><img src="{{ asset('img/gift1.jpg') }}" /></div>
-            <div class="label">{{ __('text.gift1') }}</div>
-        </article>
-        <article data-rel="Le cadeau numero 2" class="gift">
-        <div class="pict"><img src="{{ asset('img/gift2.jpg') }}" /></div>
-            <div class="label">{{ __('text.gift2') }}</div>
-        </article>
-        <article data-rel="Le cadeau numero 3" class="gift">
-        <div class="pict"><img src="{{ asset('img/gift3.jpg') }}" /></div>
-            <div class="label">{{ __('text.gift3') }}</div>
-        </article>
-     </div>
+   <h2 class="soon">
+   @if(app()->isLocale('FR'))  Rendez-vous le 14 juillet pour le lancement du THE QR ON TOUR ! @else
+	Afspraak op 14 juli voor de lancering van THE QR ON TOUR! @endif
+</h2>
 
     </div>   </div>   </div>
 </section>
@@ -147,8 +136,8 @@
       <div><img src="{{ asset('img/slide1.jpg') }}"></div>
       <div><img src="{{ asset('img/slide2.jpg') }}"></div>
       <div><img src="{{ asset('img/slide3.jpg') }}"></div>
-      <div><img src="{{ asset('img/slide4.jpg') }}"></div>
-      <div><img src="{{ asset('img/slide5.jpg') }}"></div>
+      @if(app()->isLocale('FR'))  <div><img src="{{ asset('img/slide4.jpg') }}"></div>@endif
+      @if(app()->isLocale('NL'))  <div><img src="{{ asset('img/slide5.jpg') }}"></div>@endif
   </div>
   <div class="sliderNav">
     <div class="prev"></div>
@@ -229,150 +218,6 @@
   </div>
 </section>
 
-@if (session('status'))
-       <div id="popup" class="confirm" style="">
-            <div class="close2">x</div>
-            <div class="table">
-              <div class="cell">
-          
-               <p>  @if(app()->isLocale('FR')) {!! 'Merci d’avoir participé à notre concours THE QR ON TOUR !<br/> Les gagnants seront contactés par e-mail  le 05/08/2022 . <br/>Bonne chance ! ' !!} @else {!! 'Bedankt om deel te nemen aan onze THE QR ON TOUR-wedstrijd! <br/>De winnaars worden op 5 augustus 2022 gecontacteerd via e-mail.<br/> Veel succes!' !!} @endif</p>
-            </div>  </div>  </div>
-      @endif
-
-
-  <div id="section_form"  @if ( $errors->any()) class="active" @endif>
-  <a href="@if(app()->isLocale('FR')) https://www.payconiq.be/fr @else https://www.payconiq.be/fr @endif" target="_blank"  class="logo">
-    <img src="{{ asset('img/logo.svg') }}">
-    </a>
-<div class="close">x</div>
-  <div class="table"><div class="cell">
-
-
-
-    
-  
-        <form action="{{ route('participate') }}" method="post" enctype="multipart/form-data">
-      
-      <div class="wrapForm">
-        @csrf
-
-
-     
-
-
-        <div class="wrapSentences"><div class="line">
-       
-            <span>{{ __('text.Hello') }}</span>
-                <input type="text" name="firstname" id="firstname" required value="{{ old('firstname') }}" placeholder="{{ __('text.prénom') }}">
-              
-              <input type="text" name="name" id="name" required value="{{ old('name') }}"  placeholder="{{ __('text.nom') }}">
-            
-      </div>
-
-      <div class="line">
-       
-       <span>{{ __('text.jeviensde') }}</span>
-       <input type="text" name="city" id="city" required value="{{ old('city') }}"  placeholder="{{ __('text.ville') }}">
-      </div>
-
-      <div class="line">
-            <span>{{ __('text.etmonadresse') }}</span>
-            <input type="email" name="email" id="email" required value=""  placeholder="{{ __('text.email') }}" >
-            </div>
-
-      
-</div>
-
-        <fieldset style="display:none">
-            <label>Gift</label>
-            <input type="text" name="gift" id="gift" value="{{ old('gift') }}" >
-        </fieldset>
-
-
-     <div class="wrapMoreQuestions">
-
-      <h5>{{ __('text.repondez') }}</h5>      
-      
-      <fieldset>
-            <div class="label">{{ __('text.question1') }}
-</div>
-          
-           
-
-           <ul class="radio" required>
-            <li>
-            <input type="radio" value="reponse1" id="question1" name="question1"  {{ (old('question1') == 'reponse1') ? 'checked' : ''}}>
-              <label for="question1">{{ __('text.rep1') }}</label>
-              <div class="check"></div>
-            </li>
-            
-            <li>
-            <input type="radio" value="reponse2" id="question2" name="question1"  {{ (old('question2') == 'reponse2') ? 'checked' : '' }}>
-              <label for="question2">{{ __('text.rep2') }}</label>
-              
-              <div class="check"><div class="inside"></div></div>
-            </li>
-            
-            <li>
-              <input type="radio" value="reponse3" id="question3" name="question1"  {{ (old('question3') == 'reponse3') ? 'checked' : '' }}>
-              <label for="question3">{{ __('text.rep3') }}</label>
-              
-              <div class="check"><div class="inside"></div></div>
-            </li>
-          </ul>
-           
-        </fieldset>
-
-        <fieldset class="subsidiary">
-            <label><strong>{{ __('text.question2-lab') }}</strong></label>
-            <p>{{ __('text.question2') }} </p>
-            <input type="number" inputmode="numeric" name="question2" id="question2" required value="" >
-        </fieldset>
-
-      </div>
-
-
-
-
-       <div class="wrapSubmit" >
-        <div>  <div class="mandatory">
-              <input type="checkbox" value="yes" name="mandat1" id="mandat1" required>
-              <label for="mandat1">
-                
-           
-              
-                @if(app()->isLocale('FR'))
-                J’ai compris et j’accepte les 
-                <a href="{{ route('legals') }}?locale=FR" target="_blank">
-                conditions de participation</a>
-                @else
-                Ik heb de wedstrijdvoorwaarden gelezen en  <a href="{{ route('legals') }}?locale=NL" target="_blank">aanvaard ze</a>
-                @endif
-              </label>
-              <div class="check"><div class="inside"></div></div>
-          </div></div>
-          <input type="submit" value="{{ __('text.envoyer') }}">
-      </div>
-</div>
-    </form>
-
-    @if ( $errors->any()) <div id="popuperror">
-
-    <div class="close2">x</div>
-              <div class="table"><div class="cell">
-
-              @if ($errors->any())
-        @foreach ($errors->all() as $error)
-        <p>  
-             @error('email')   @if(app()->isLocale('FR')) {!! 'Désolé, tu ne peux participer qu’une seule fois au concours THE QR ON TOUR. <br/>Encore un peu de patience, les gagnants seront contactés par e-mail le 05/08/2022 !<br/> Bonne chance !'!!} @else {!! 'Het spijt ons, je kan maar één keer deelnemen aan de THE QR ON TOUR-wedstrijd. <br/>Nog even geduld, de winnaars worden op 5 augustus 2022 gecontacteerd via e-mail.<br/> Veel succes! ' !!} @endif @enderror </p>
-
-          @endforeach
-          @endif
-
-              
-            </div>  </div> 
-
-       </div> @endif
 
 </div>
 
