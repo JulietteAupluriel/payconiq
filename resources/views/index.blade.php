@@ -165,7 +165,7 @@
   <div class="wrapper">
     
     <div class="cities">
-      <div class="city active" data-rel="day14">
+      <div class="city" data-rel="day14">
         <div class="square" style="background-image:url({{ asset('img/bxl.jpg') }})">
           <div class="table"><div class="cell"><b>14.06</b></div></div>
         </div>
@@ -175,7 +175,7 @@
           <h6>Mont des arts</h6>
       </div>
       </div>
-      <div class="city" data-rel="day15">
+      <div class="city active" data-rel="day15">
         <div class="square" style="background-image:url({{ asset('img/anvers.jpg') }})">
         <div class="table"><div class="cell"><b>15.07</b></div></div>
         </div>
