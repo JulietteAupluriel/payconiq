@@ -158,7 +158,7 @@
 </section>
 
 <section id="sect-5"  class="scrollme  sect-onTheRoad">
-<div id="byDay" class="day15">
+<div id="byDay" class="day16">
 <div class="pinkShape"></div>
   <div class="table"><div class="cell">
 
@@ -175,7 +175,7 @@
           <h6>Mont des arts</h6>
       </div>
       </div>
-      <div class="city active" data-rel="day15">
+      <div class="city " data-rel="day15">
         <div class="square" style="background-image:url({{ asset('img/anvers.jpg') }})">
         <div class="table"><div class="cell"><b>15.07</b></div></div>
         </div>
@@ -185,7 +185,7 @@
           <h6>Mont des arts</h6>
         </div>
       </div>
-      <div class="city" data-rel="day16">
+      <div class="city active" data-rel="day16">
         <div class="square" style="background-image:url({{ asset('img/liege.jpg') }})">
         <div class="table"><div class="cell"><b>16.07</b></div></div>
         </div>
